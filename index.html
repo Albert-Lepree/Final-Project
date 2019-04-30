@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     
     
 <title>Finn LePree</title>
@@ -34,7 +34,7 @@ ctx.strokeText("Albert Finnegan Lepree (Finn)",10,50);
         <h1>Videos and Pictures</h1>
         
         <h2>     
-        <video src="website%20video.mp4" controls>
+        <video src="videos/website%20video.mp4" controls>
         </video>
             
         
@@ -84,6 +84,33 @@ Click me to display Date and Time.</button>
     <dt style= "font-weight: bold">Intro To computer Science</dt>
     <dd>- The first College course I took having to do with computer science, I learned more in the 4 months being in that class than I have in my 10+ years on the internet.</dd>
             </dl>
+        
+        <h3>Caesar Cipher</h3>
+        <input id="in">
+<button type="button" onclick="myFunction()">Submit</button>
+<script>
+
+        function myFunction() {
+            var inVar, outVar;
+
+            // Input
+            inVar = document.getElementById("in").value;
+
+            // Processing
+            outVar = "";
+            var position = 0;
+            var max=inVar.length;
+            while (position < max) {
+                outVar = outVar + String.fromCharCode(inVar.charCodeAt(position) + 3);
+                position = position + 1;
+            }
+
+            // Output
+            document.getElementById("out").innerHTML = outVar;
+        }
+
+    </script>
+    <p id="out"></p>
         
         
         
